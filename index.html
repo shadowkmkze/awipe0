@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>&lt;A&gt;WIPE/0 — Flush the Inferred</title>
+<meta name="description" content="Una demanda técnica con base legal: que el borrado del perfil inferido sea completo, real y verificable.">
+<meta property="og:title" content="&lt;A&gt;WIPE/0 — Flush the Inferred">
+<meta property="og:description" content="Exigimos que cada plataforma incorpore un mecanismo de reinicio completo del perfil algorítmico. Completo. Real. Verificable.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --cyan: #00FFFF;
+    --bg: #000000;
+    --text: #FFFFFF;
+    --muted: #888888;
+    --border: #222222;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  header {
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .campaign-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(2.4rem, 8vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .campaign-name .br { color: var(--cyan); }
+
+  .tagline {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.82rem;
+    color: var(--cyan);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  nav {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.15s;
+  }
+
+  nav a:hover { color: var(--cyan); }
+
+  #manifesto {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    color: var(--cyan);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  .block { margin-bottom: 2.5rem; }
+  .block:last-child { margin-bottom: 0; }
+
+  .block h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .block p {
+    color: #DDDDDD;
+    margin-bottom: 0.75rem;
+  }
+
+  .block p:last-child { margin-bottom: 0; }
+
+  .demands {
+    margin: 1.25rem 0;
+    border-left: 2px solid var(--cyan);
+    padding-left: 1.25rem;
+  }
+
+  .demand {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .demand:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .demand-n {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    color: var(--cyan);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .demand strong {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  .demand p {
+    color: #AAAAAA;
+    font-size: 0.92rem;
+    margin: 0;
+  }
+
+  .flush-line {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  #social {
+    padding: 3rem 0;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: var(--cyan);
+    text-decoration: none;
+    border: 1px solid var(--cyan);
+    padding: 0.55rem 1rem;
+    letter-spacing: 0.06em;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .social-link:hover { background: var(--cyan); color: var(--bg); }
+  .social-link svg { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+
+  footer {
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-hashtag {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cyan);
+  }
+
+  .footer-license {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="campaign-name">
+    <span class="br">&lt;</span>A<span class="br">&gt;</span>WIPE/0
+  </h1>
+  <p class="tagline">Flush the inferred &nbsp;·&nbsp; #AWIPE0</p>
+  <nav>
+    <a href="#manifesto">Manifiesto</a>
+    <a href="#social">Redes</a>
+  </nav>
+</header>
+
+<section id="manifesto">
+  <p class="section-label">Manifiesto — Versión auditada y expandida</p>
+
+  <div class="block">
+    <h2>Tu perfil no eres tú.</h2>
+    <p>Cada vez que usas una red social, un buscador o una plataforma de contenido, produces dos tipos de datos.</p>
+    <p>Los <strong style="color:#fff;display:inline;font-size:inherit">declarados</strong>: búsquedas, publicaciones, cuentas seguidas. Explícitos, conscientes, voluntarios.</p>
+    <p>Y los <strong style="color:#fff;display:inline;font-size:inherit">inferidos</strong>: tiempo de pausa sobre una imagen, velocidad de scroll, patrones de reproducción, secuencias de atención, datos de contexto y dispositivo. No los escribiste. No los enviaste. El sistema los extrajo de tu comportamiento y los convirtió en señales que alimentan tu perfil algorítmico.</p>
+    <p>Esa distinción no es menor. Es el núcleo del problema.</p>
+  </div>
+
+  <div class="block">
+    <h2>La asimetría.</h2>
+    <p>Los términos de servicio que aceptaste regulan el uso de tus datos declarados. No describen con precisión el alcance del perfilado inferido, ni ofrecen mecanismos reales para revertirlo. Investigación académica publicada en 2025 documenta que los términos de servicio de las principales plataformas ofrecen opciones simplificadas — "aceptar todo", "de acuerdo" — entregadas mediante interacciones pasivas como hacer scroll o marcar una casilla. Estas acciones satisfacen requisitos legales mínimos. No constituyen consentimiento informado sobre el alcance real del perfilado inferido.</p>
+    <p>Las plataformas modifican sus algoritmos en cualquier momento. Actualizan modelos, reentrenan sistemas, ajustan parámetros de recomendación según sus intereses comerciales. Esa capacidad no tiene equivalente del lado del usuario.</p>
+    <p>No existe actualmente ningún mecanismo que permita borrar el perfil inferido de forma completa y verificable. Los controles disponibles operan sobre la capa declarada. No alcanzan la capa inferida. Eso no es un olvido técnico. Es una decisión de diseño.</p>
+  </div>
+
+  <div class="block">
+    <h2>La demanda.</h2>
+    <p>&lt;A&gt;WIPE/0 exige que cada plataforma incorpore en su configuración un mecanismo de reinicio completo del perfil algorítmico. La demanda tiene tres condiciones técnicas mínimas. Sin las tres, cualquier reinicio es cosmético.</p>
+    <div class="demands">
+      <div class="demand">
+        <span class="demand-n">Condición 01</span>
+        <strong>Borrado de señales inferidas.</strong>
+        <p>No el historial visible. Las señales de comportamiento extraídas implícitamente: tiempos de pausa, patrones de scroll, activación de sonido, secuencias de atención, datos de contexto y dispositivo. Si esas señales permanecen como parámetros activos del modelo, el perfil permanece. Cambiar la interfaz no es borrar el perfil.</p>
+      </div>
+      <div class="demand">
+        <span class="demand-n">Condición 02</span>
+        <strong>Desvinculación del perfil publicitario.</strong>
+        <p>El modelo publicitario opera sobre una capa de datos distinta a las recomendaciones de contenido. Ambas capas se alimentan de señales inferidas. Si después del reinicio el comportamiento publicitario no cambia, el perfil no cambió. Un reinicio que no alcanza ambas capas no es un reinicio.</p>
+      </div>
+      <div class="demand">
+        <span class="demand-n">Condición 03</span>
+        <strong>Verificabilidad independiente.</strong>
+        <p>El usuario debe poder constatar una diferencia medible tras el reinicio. Un reinicio no verificable de forma independiente es una declaración unilateral de la plataforma. La carga de la prueba corresponde a quien afirma que el borrado ocurrió.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Lo que la ley ya reconoce — y las plataformas eluden.</h2>
+    <p>El Artículo 17 del GDPR reconoce el derecho al borrado de datos personales, incluyendo perfiles construidos sobre datos inferidos, cuando el usuario retira su consentimiento o cuando los datos ya no son necesarios para los fines declarados. Este derecho es jurídicamente exigible en Europa y ha inspirado legislación equivalente en Brasil, California y otros mercados.</p>
+    <p>Existe además una dimensión técnica que las plataformas no mencionan: en sistemas de machine learning, el borrado genuino exige no solo eliminar registros de bases de datos sino también revertir el efecto de esos datos sobre los modelos entrenados con ellos — lo que la literatura técnica denomina <em>machine unlearning</em>. Ese proceso no está implementado en ninguna plataforma de escala. La brecha entre el derecho legal al borrado y la capacidad técnica de ejecutarlo es real, documentada y conveniente para las plataformas.</p>
+    <p>La DSA obliga a las plataformas designadas como VLOPs a ofrecer al menos un sistema de recomendación no basado en perfilado. En octubre de 2025, el Tribunal de Amsterdam ordenó a Meta permitir feeds no algorítmicos persistentes. En marzo de 2026 el tribunal de apelaciones confirmó la decisión. Ese fallo establece el derecho a un feed sin perfilado. &lt;A&gt;WIPE/0 va más allá: exige el derecho a borrar el perfil inferido que alimenta ese perfilado. No son la misma demanda. Por eso existe esta campaña.</p>
+  </div>
+
+  <div class="block">
+    <h2>Sobre el argumento de "si no te gusta, no la uses".</h2>
+    <p>Las redes sociales son infraestructura crítica de la vida contemporánea. Trabajo, educación, contacto institucional, información de emergencia — todo pasa por ellas. No existe alternativa con masa crítica equivalente. Salirse tiene un costo social y profesional concreto y documentado.</p>
+    <p>&lt;A&gt;WIPE/0 no pide abandonar ninguna plataforma. No pide modificar ningún modelo de negocio. Pide que los mecanismos de control existentes alcancen la capa de datos que realmente construye el perfil. Los usuarios producen los datos sobre los que opera el sistema. Exigir control real sobre el perfil inferido es parte legítima de ese intercambio.</p>
+  </div>
+
+  <div class="block">
+    <h2>Un problema reconocido transversalmente.</h2>
+    <p>La concentración del control algorítmico en pocas corporaciones privadas no es una posición de campaña. Es el diagnóstico convergente de marcos legales, organismos reguladores e instituciones de alcance global. Cuando algoritmos, plataformas e infraestructuras tecnológicas se concentran en pocas manos sin mecanismos de control accesibles para quienes los alimentan, se genera una asimetría estructural que contradice principios básicos de justicia distributiva. El problema no es ideológico. Es técnico, legal y documentado.</p>
+  </div>
+
+  <div class="block">
+    <h2>Sobre quién usará este mecanismo.</h2>
+    <p>La mayoría no lo usará. Igual que la mayoría no ejerce otros derechos que legalmente le corresponden.</p>
+    <p>Los derechos no se justifican por su tasa de uso. Se justifican por la estructura de poder que su ausencia sostiene. Un derecho no ejercible en la práctica no es un derecho — es una cláusula decorativa.</p>
+    <p>&lt;A&gt;WIPE/0 no es una campaña de adopción masiva. Es una demanda de que el control sobre el perfil inferido exista de forma real, técnicamente sólida y verificable, para quien decida ejercerlo.</p>
+  </div>
+
+  <p class="flush-line">&lt;A&gt;WIPE/0 no es un movimiento contra la tecnología. Es una demanda técnica con base legal: que el borrado del perfil inferido sea completo, real y verificable. — Flush the inferred.</p>
+</section>
+
+<section id="social">
+  <p class="section-label">Seguir la campaña</p>
+  <div class="social-links">
+    <a class="social-link" href="https://instagram.com/awipe0" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @awipe0
+    </a>
+    <a class="social-link" href="https://reddit.com/r/awipe0" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+      r/awipe0
+    </a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-hashtag">#AWIPE0</span>
+  <span class="footer-license">Creative Commons CC BY 4.0</span>
+</footer>
+
+</body>
+</html>
